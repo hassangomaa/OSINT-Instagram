@@ -1,22 +1,11 @@
-# Osintgram 🔎📸
+ 
+ 
+ 
+ 
 
-[![version-1.3](https://img.shields.io/badge/version-1.3-green)](https://github.com/Datalux/Osintgram/releases/tag/1.3)
-[![GPLv3](https://img.shields.io/badge/license-GPLv3-blue)](https://img.shields.io/badge/license-GPLv3-blue)
-[![Python3](https://img.shields.io/badge/language-Python3-red)](https://img.shields.io/badge/language-Python3-red)
-[![Telegram](https://img.shields.io/badge/Telegram-Channel-blue.svg)](https://t.me/osintgram)
-[![Docker](https://img.shields.io/badge/Docker-Supported-blue)](https://img.shields.io/badge/Docker-Supported-blue)
-
-Osintgram is a **OSINT** tool on Instagram to collect, analyze, and run reconnaissance.
-
-<p align="center">
-<img align="center" src=".img/carbon.png" width="900">
-</p>
-
-Disclaimer: **FOR EDUCATIONAL PURPOSE ONLY! The contributors do not assume any responsibility for the use of this tool.**
-
-Warning: It is advisable to **not** use your own/primary account when using this tool.
-
-## Tools and Commands 🧰
+ 
+ 
+## Tools and Commands 
 
 Osintgram offers an interactive shell to perform analysis on Instagram account of any users by its nickname. You can get:
 
@@ -42,12 +31,7 @@ Osintgram offers an interactive shell to perform analysis on Instagram account o
 - wcommented      Get a list of user who commented target's photos
 - wtagged         Get a list of user who tagged target
 ```
-
-You can find detailed commands usage [here](doc/COMMANDS.md).
-
-[**Latest version**](https://github.com/Datalux/Osintgram/releases/tag/1.3) |
-[Commands](doc/COMMANDS.md) |
-[CHANGELOG](doc/CHANGELOG.md)
+ 
 
 ## FAQ
 1. **Can I access the contents of a private profile?** No, you cannot get information on private profiles. You can only get information from a public profile or a profile you follow. The tools that claim to be successful are scams!
@@ -58,11 +42,11 @@ You can find detailed commands usage [here](doc/COMMANDS.md).
 
 1. Fork/Clone/Download this repo
 
-    `git clone https://github.com/Datalux/Osintgram.git`
+    https://github.com/hassangomaa/OSINT-Instagram.git
 
 2. Navigate to the directory
 
-    `cd Osintgram`
+    `cd OSINT-Instagram`
 
 3. Create a virtual environment for this project
 
@@ -84,8 +68,7 @@ You can find detailed commands usage [here](doc/COMMANDS.md).
     * Or execute your command straight away `python3 main.py <target username> --command <command>`
     
 ### Use Osintgram v2 (beta)
-You can use Osintgram2 beta just switching to `v2` [branch](https://github.com/Datalux/Osintgram/tree/v2).
-The v2 has some improvements and faster with a new command execution interface. Try it just running `git checkout v2`.
+ The v2 has some improvements and faster with a new command execution interface. Try it just running `git checkout v2`.
 
 ## Docker Quick Start 🐳
 
@@ -114,7 +97,7 @@ docker build -t osintgram .
 Run:
 
 ```bash
-docker run --rm -it -v "$PWD/output:/home/osintgram/output" osintgram <target>
+docker run --rm -it -v "$PWD/output:/home/OSINT-Instagram/output" osintgram <target>
 ```
 
 - The `<target>` is the Instagram account you wish to use as your target for recon.
@@ -171,16 +154,7 @@ To update Osintgram with the stable release just pull the latest commit using Gi
 2. Download the latest version: `git pull origin master`
 
 
-## Contributing 💡
-
-You can propose a feature request opening an issue or a pull request.
-
-Here is a list of Osintgram's contributors:
-
-<a href="https://github.com/Datalux/Osintgram/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Datalux/Osintgram" />
-</a>
-
+ 
 ## External library 🔗
 
 [Instagram API](https://github.com/ping/instagram_private_api)
