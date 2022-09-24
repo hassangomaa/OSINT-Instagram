@@ -325,22 +325,20 @@ class Osintgram:
         data = self.api.user_followers(str(self.target_id), rank_token=rank_token)
 
         _followers.extend(data.get('users', []))
-      ##  print(len(_followers))
-        ##print(_followers)
+
         next_max_id = data.get('next_max_id')
-#        next_max_id = 100
-        counter = 0
-        while next_max_id and counter < user_cmd :
+        while next_max_id:
             sys.stdout.write("\rCatched %i followers" % len(_followers))
             sys.stdout.flush()
             results = self.api.user_followers(str(self.target_id), rank_token=rank_token, max_id=next_max_id)
             _followers.extend(results.get('users', []))
+            if len(_followers) >= user_cmd:
+                break
             next_max_id = results.get('next_max_id')
-            counter += 1
 
         print("\n")
         _followers =  _followers[:user_cmd]
-        print(len(_followers))
+        sys.stdout.write( "Here's first Random %i Followers\n\n" % len(_followers))
 
         for user in _followers:
             u = {
