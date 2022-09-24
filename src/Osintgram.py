@@ -315,21 +315,21 @@ class Osintgram:
             return
 
         pc.printout("Searching for target followers...\n")
-        user_cmd = input("How many Follwers Do You Need ?")
+        user_cmd =int( input("How many Follwers Do You Need... ?"))
 
         ## attrbbuties 
         _followers = []
         followers = []
-
+        ############limit the requsts up to User Needs
         rank_token = AppClient.generate_uuid()
         data = self.api.user_followers(str(self.target_id), rank_token=rank_token)
 
         _followers.extend(data.get('users', []))
-
-        next_max_id = data.get('next_max_id')
-        ############limit the requsts up to User Needs
+        _followers =  _followers[:100]
+        # next_max_id = data.get('next_max_id')
+        next_max_id = 100
         counter = 0
-        while next_max_id and counter <= user_cmd :
+        while next_max_id and counter <= 100 :
             sys.stdout.write("\rCatched %i followers" % len(_followers))
             sys.stdout.flush()
             results = self.api.user_followers(str(self.target_id), rank_token=rank_token, max_id=next_max_id)
